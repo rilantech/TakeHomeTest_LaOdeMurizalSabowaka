@@ -19,18 +19,20 @@ public class SoalNomor4 {
         int maxUntung = 0;
         int keuntunganTerbaik = harga[0];
 
-        for (int i = 1; i < harga.length; i++) {
-            int untung = harga[i] - minHarga;
+            int i = 1;
+            do {
+                int untung = harga[i] - minHarga;
 
-            if (untung > maxUntung) {
-                maxUntung = untung;
-                keuntunganTerbaik = minHarga;
-            }
+                if (untung > maxUntung) {
+                    maxUntung = untung;
+                    keuntunganTerbaik = minHarga;
+                }
 
-            if (harga[i] < minHarga) {
-                minHarga = harga[i];
-            }
-        }
+                if (harga[i] < minHarga) {
+                    minHarga = harga[i];
+                }
+                i++;
+            } while(i < harga.length);
 
         return keuntunganTerbaik;
     }
