@@ -4,6 +4,12 @@ public class SoalNomor1 {
 
     public static void main(String[] args) {
 
+        String input = perbaikiKalimat("""
+                 italem irad irigayaj
+                 iadab itsap ulalreb
+                 nalub kusutret gnalali
+                """);
+        System.out.println(input);
     }
 
     public static String perbaikiKalimat(String input){
