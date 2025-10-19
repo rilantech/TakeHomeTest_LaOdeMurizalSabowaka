@@ -19,6 +19,9 @@ public class DashboardServiceImpl implements DashboardService {
         Booking[] bookings = restTemplate.getForObject(bookingApiUrl, Booking[].class);
         MasterKonsumsi[] masterKs = restTemplate.getForObject(konsumsiApiUrl, MasterKonsumsi[].class);
 
+        if (bookings == null) bookings = new Booking[0];
+        if (masterKs == null) masterKs = new MasterKonsumsi[0];
+
         return null;
     }
 }
