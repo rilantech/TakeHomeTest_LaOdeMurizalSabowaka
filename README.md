@@ -1,5 +1,5 @@
 # TakeHomeTest_LaOdeMurizalSabowaka
-Ini merupakan codingan jawaban Logical Test dan Practical Test. 
+Ini merupakan code atau program jawaban Logical Test dan Practical Test. 
 
 ## Teknologi yang digunakan:
 - Framework Spring Boot
