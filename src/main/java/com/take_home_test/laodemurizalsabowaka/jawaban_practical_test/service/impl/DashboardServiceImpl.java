@@ -8,6 +8,11 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.time.YearMonth;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 @RequiredArgsConstructor
 public class DashboardServiceImpl implements DashboardService {
@@ -21,6 +26,15 @@ public class DashboardServiceImpl implements DashboardService {
 
         if (bookings == null) bookings = new Booking[0];
         if (masterKs == null) masterKs = new MasterKonsumsi[0];
+
+        YearMonth targetYm = YearMonth.of(year, month);
+        List<Booking> filtered = Arrays.stream(bookings)
+                .filter(b -> b.getStartTime() != null)
+                .filter(b -> {
+                    YearMonth ym = YearMonth.from(b.getStartTime().toLocalDate());
+                    return ym.equals(targetYm);
+                })
+                .collect(Collectors.toList());
 
         return null;
     }
