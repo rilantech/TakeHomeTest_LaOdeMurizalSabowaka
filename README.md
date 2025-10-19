@@ -8,6 +8,6 @@ Ini merupakan codingan jawaban Logical Test dan Practical Test.
 - Kode Editor: Intellij
 
 ## Catatan:
-*Program Logical Test tersimpan didalam folder "jawaban_logical_test"
-*Program Practical Test tersimpan didalam folder "jawaban_practical_test"
-*Untuk menjalankan program Practical Test, lakukan running pada class MainApp.java
+- Program Logical Test tersimpan didalam folder "jawaban_logical_test"
+- Program Practical Test tersimpan didalam folder "jawaban_practical_test"
+- Untuk menjalankan program Practical Test, lakukan running pada class MainApp.java
