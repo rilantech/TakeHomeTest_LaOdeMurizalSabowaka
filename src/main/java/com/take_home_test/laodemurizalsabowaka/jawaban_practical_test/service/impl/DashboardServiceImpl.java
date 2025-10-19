@@ -89,7 +89,7 @@ public class DashboardServiceImpl implements DashboardService {
             summary.setUsagePercent(summary.getUsagePercent() + durationHours);
         }
 
-        double jamMaxDalamBulan = 8.0 * 22;
+        double jamMaxDalamBulan = 10.31 * 12;
         for (RoomUsageSummary rs : roomsSummary) {
             double jamDipakai = rs.getUsagePercent();
             double percent = (jamDipakai / jamMaxDalamBulan) * 100.0;
