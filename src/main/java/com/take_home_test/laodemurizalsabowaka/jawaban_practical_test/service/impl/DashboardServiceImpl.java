@@ -11,6 +11,7 @@ import org.springframework.web.client.RestTemplate;
 import java.time.YearMonth;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
@@ -35,6 +36,14 @@ public class DashboardServiceImpl implements DashboardService {
                     return ym.equals(targetYm);
                 })
                 .collect(Collectors.toList());
+
+        Map<String, String> officeToUnit = Map.of(
+                "UID JAYA", "Unit Induk 1",
+                "UID BALI", "Unit Induk 2",
+                "UID JABAR", "Unit Induk 3",
+                "UID JATENG & DIY", "Unit Induk 4",
+                "UID JATIM", "Unit Induk 5"
+        );
 
         return null;
     }
